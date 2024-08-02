@@ -1,0 +1,14 @@
+*/target/
+target/
+
+# Intellij
+.idea
+*.ipr
+*.iml
+*iws
+
+# Qaurkus
+*.log
+
+# VSCode
+.vscode
