@@ -43,6 +43,13 @@
             <artifactId>quarkus-undertow</artifactId>
         </dependency>
 
+        <!-- grpc     -->
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-grpc</artifactId>
+        </dependency>
+
+        <!-- o2s  -->
         <dependency>
             <groupId>org.o2s.engine</groupId>
             <artifactId>o2s-engine-data</artifactId>
@@ -64,6 +71,7 @@
                     <execution>
                         <goals>
                             <goal>build</goal>
+                            <goal>generate-code</goal>
                         </goals>
                     </execution>
                 </executions>

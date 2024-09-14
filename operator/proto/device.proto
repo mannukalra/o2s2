@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "o2sgrpc.service";
+option java_outer_classname = "DeviceProto";
+option objc_class_prefix = "HLW";
+option go_package = "o2sgrpc/service";
+
+package o2sgrpc.service;
+
+// The Device service definition.
+service Device {
+    // Sends a device
+    rpc GetDevice (DeviceRequest) returns (DeviceReply) {}
+}
+
+// The request message containing the env's name.
+message DeviceRequest {
+    string env_name = 1;
+}
+
+// The response message containing the device details
+message DeviceReply {
+    string device_details = 1;
+    int32 count = 2;
+}

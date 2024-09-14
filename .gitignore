@@ -12,3 +12,9 @@ target/
 
 # VSCode
 .vscode
+
+# protoc
+operator/o2sgrpc
+
+# db
+data/engine_h2_db.mv.db
