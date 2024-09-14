@@ -2,16 +2,16 @@ package org.o2s.api;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import org.o2s.orm.FruitResource;
+import org.o2s.orm.DataResource;
 
 @ApplicationScoped
 public class GreetingService {
 
     @Inject
-    FruitResource fruitResource;
+    DataResource dataResource;
 
     public String greeting(String name) {
-        return "hello " + name + fruitResource.get().toString();
+        return "hello " + name + dataResource.get().toString();
     }
 
 }

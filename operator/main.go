@@ -17,9 +17,9 @@ func main() {
     defer conn.Close()
 
     deviceClient := pb.NewDeviceClient(conn)
-    device, err := deviceClient.GetDevice(context.Background(), &pb.DeviceRequest{EnvName: "dear device from grpc!!!"})
+    devicesResponse, err := deviceClient.GetDevices(context.Background(), &pb.DeviceRequest{EnvId: 1})
     if err != nil {
         println("failed to get device details: %v", err)
     }
-    println("device details:", device.DeviceDetails)
+    println("device details:", devicesResponse.GetDevices()[0].DeviceHost)
 }
